@@ -1,13 +1,12 @@
-import Cart from "./Cart";
+import Cart from './Cart'
 
-function Header(props) {
-    const { cartCounter } = props;
-    
-    return (
-        <header>
-            <Cart cartCounter={ cartCounter } />
-        </header>
-    )
+const Header = (props) => {
+  const {cartLength} = props;
+  return (
+    <header>
+        <Cart cartLength={cartLength}/>
+    </header>
+  )
 }
 
-export default Header;
+export default Header

@@ -8,21 +8,20 @@ import Header from './components/Header';
 
 function App() {
   const [cart, setCart] = useState([]);
-  
+
   function updateCart(product) {
-    console.log(product);
-    const cartCopy = [...cart]; // Gör en kopia på vår array med spread operatorn (...)
-    cartCopy.push(product); // Pushade in vår nya produkt i arrayen.
-    setCart(cartCopy); // Uppdatera state med vår nya array
+    const cartCopy = [...cart];
+    cartCopy.push(product);
+    setCart(cartCopy);
   }
 
   const productItems = products.map((product, index) => {
-    return <Product productInfo = { product } key={ index } updateCart={ updateCart } />
-  });
+    return <Product productInfo = { product } key={ index } updateCart={ updateCart }/>
+  })
 
   return (
     <div className="App">
-      <Header cartCounter={ cart.length } />
+      <Header cartLength={cart.length}/>
       <section className='products'>
         { productItems }
       </section>

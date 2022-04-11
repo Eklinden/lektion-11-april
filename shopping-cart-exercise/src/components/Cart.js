@@ -1,12 +1,12 @@
-function Cart(props) {
-    const { cartCounter } = props;
 
-    return (
-        <section>
-            <a href="#">Cart</a>
-            <span>{ cartCounter }</span>
-        </section>
-    )
+const Cart = (props) => {
+    const {cartLength} = props;
+  return (
+    <section>
+        <a href="#">Cart</a>
+        <span>{ cartLength }</span>
+    </section>
+  )
 }
 
-export default Cart;
+export default Cart
